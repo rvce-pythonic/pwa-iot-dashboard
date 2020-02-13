@@ -1,0 +1,23 @@
+<!DocType html>
+<html>
+{% load static %}
+<head>
+<title>Hydroponics</title>
+
+</head>
+<body>
+<h1> Hello!</h1>
+<h2> Good Morning</h2>
+<table border =1 align='center' >
+<tr><th>Username</th><th>Email Id</th><th>Mobile Number</th><th>Designation</th><th>Created Time</th></tr>
+{% for obj in object_list %}
+<tr>
+   <td> {{obj.username}}</td>
+   <td> {{obj.email_id}}</td>
+   <td> {{obj.mobile_number}}</td>
+    <td>{{obj.designation}}</td>
+    <td>{{obj.created_datetime}}</td></tr>
+{% endfor %}
+</table>
+</body>
+</html>
